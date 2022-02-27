@@ -7,7 +7,7 @@ const TopSection = tw.div`
   pt-14
   px-10
   pb-20
-  bg-[#054a49]
+  bg-red-300
 
 `;
 const TopContentContainer = tw.div`
@@ -30,25 +30,29 @@ const ImageSection = tw.section`
 
 const TitleContainer = tw.div``;
 const TopSmallTitle = tw.div`
-  text-teal-400
-  font-medium
-  pb-8
+  text-red-500
+  font-bold
+  pb-4
+  h1{
+    text-lg
+  }
 `;
 const BigTitle = tw.div`
-  text-white
+  text-[#FF3E53]
   text-3xl
+  font-bold
   break-words
 `;
 const SubText = tw.div`
   pt-7
-  text-teal-100
+  text-white
   font-medium
-  text-lg
+  text-2xl
   pb-7
 `;
 const ButotnContainer = tw.div``;
 const ContactBtn = tw.button`
-  bg-emerald-600
+  bg-[#FF3E53]
   w-full
   rounded-md
   py-3
@@ -56,7 +60,7 @@ const ContactBtn = tw.button`
   text-white
   font-bold
   cursor-pointer
-hover:bg-emerald-700
+hover:bg-red-500
   transition-all
   duration-300
   active:bg-emerald-900
@@ -72,7 +76,7 @@ const BodySection = tw.section`
 `;
 
 const MessageSection = tw.section`
-  bg-orange-50
+  bg-red-50
   mt-20
   flex
   justify-between
@@ -119,29 +123,29 @@ const Home: NextPage = () => {
           <HeadSection>
             <TitleContainer>
               <TopSmallTitle>
-                <h3>웹사이트 전문 제작</h3>
+                <h3>현실 커플 매치</h3>
               </TopSmallTitle>
               <BigTitle>
-                <h1>마음에 들지 않으면 100% 환불해드립니다.</h1>
+                <h1>솔로 모집중!</h1>
               </BigTitle>
               <SubText>
-                홈페이지, 웹사이트를 제작하실려고 하시나요?
+                결혼을 간절히 원하시나요?
                 <br />
-                수많은 업체 중에서 선택하기 어려우신가요?
-                <br />꼭 저희를 선택하지 않아도 됩니다.
+                여러분의 사랑을 찾을 수 있는 기회를 드립니다.
                 <br />
-                무료로 상담 받아보시고 결정하세요!
+                솔로기장의 주인공이 되어보세요!
+                <br />
               </SubText>
               <ButotnContainer>
-                <ContactBtn>상담하기</ContactBtn>
+                <ContactBtn>신청하기</ContactBtn>
               </ButotnContainer>
             </TitleContainer>
           </HeadSection>
           <ImageSection>
             <ImageContainer>
               <Image
-                src={'/webmaking.jpg'}
-                alt='make_web_main_image'
+                src={'/main.png'}
+                alt='couple_making'
                 width={400}
                 height={300}
                 objectFit='cover' // change to suit your needs
@@ -153,60 +157,59 @@ const Home: NextPage = () => {
       </TopSection>
       <BodySection>
         <BodyItem
-          imageSrc={'/consulting.jpg'}
+          imageSrc={'/single.jpg'}
           imageAlt={'web_consulting'}
-          titleDescription={'웹사이트 제작에 대해서 잘 모르시나요?'}
-          subtitleDescription={'꼭 저희를 통해서 진행하지 않으셔도 됩니다.'}
-          smallDescriptionTitle={'무료로 상담해드립니다.'}
+          titleDescription={'현재 솔로이신가요?'}
+          subtitleDescription={'변화를 시도해보세요'}
+          smallDescriptionTitle={'그냥 신청만 해주세요.'}
           smallSubDescriptionContents={[
-            '웹사이트 업체가 부르는 가격은 천차만별일 겁니다.',
-            '거품을 없애는 방법을 알려드리겠습니다.',
+            '매일 마주하는 일상의 틀을 벗어나 새로운 사람을 만날 수 있게 해드릴게요.',
+            '새로운 연인을 만날 설레임에 두근거리지 않나요?',
           ]}
         />
         <BodyItem
-          imageSrc={'/nodesign.jpg'}
-          imageAlt={'we have no designer but'}
-          titleDescription={'저희는 디자이너는 없습니다.'}
-          subtitleDescription={'대신 참고하실 사이트만 알려주세요!'}
-          smallDescriptionTitle={'저희는 디자이너는 없습니다. 단!'}
+          imageSrc={'/wait.jpg'}
+          imageAlt={'what are you waiting for'}
+          titleDescription={'무엇을 기다리고 계신가요?'}
+          subtitleDescription={'먼저 움직이세요!'}
+          smallDescriptionTitle={'저희가 도와드릴게요.'}
           smallSubDescriptionContents={[
-            '똑같이 만들어 낼 개발 능력은 있습니다.',
-            '하지만 퀄리티는 보장합니다.',
-            '실력으로 확실한 웹사이트를 제작해드리며,',
-            '디자이너는 없지만 거품은 없는 가격으로 만들어드립니다.',
+            '마음이 가는대로, 심장이 시키는대로 하세요',
+            '그리 어려울건 없습니다.',
+            '단, 가벼운 마음은 안됩니다.',
           ]}
         />
         <BodyItem
-          imageSrc={'/maintaining.jpg'}
-          imageAlt={'maintaining'}
-          titleDescription={'무료로 유지보수 해드립니다.'}
-          subtitleDescription={'끝까지 책임지겠습니다.'}
-          smallDescriptionTitle={'관리가 안될까봐 걱정하지마세요.'}
+          imageSrc={'/marry.jpg'}
+          imageAlt={'pls only seriously people'}
+          titleDescription={'결혼을 간절히 원하시는 분만 지원해주세요!'}
+          subtitleDescription={'정말 간절한 분들에게만 기회를 드리고 싶습니다.'}
+          smallDescriptionTitle={'가벼운 마음으로 오는 곳이 아닙니다.'}
           smallSubDescriptionContents={[
-            '유지보수를 끝까지 책임지겠습니다.',
-            '문제가 있다면 말씀만해주세요.',
+            '진정한 사랑을 찾기 위한 사람들을 위한 시간입니다.',
+            '어설픈 마음은 정중히 거절하겠습니다.',
           ]}
         />
       </BodySection>
       <MessageSection>
         <MessageContentContainer>
-          <MessageTitle>생각을 현실로 만드세요.</MessageTitle>
+          <MessageTitle>솔로가 커플이 되는 곳, 솔로기장</MessageTitle>
           <MessageSubtitle>
             <MessageSubtitleHead>
-              좋은 생각이 있다면 실행을 시켜야합니다.
+              솔로기장, 그곳에서 만들어지는 무궁무진한 이야기
             </MessageSubtitleHead>
             <MessaegSubtitleContent>
-              좋은 생각은 누구나 할 수 있습니다.
+              생각은 누구나 할 수 있습니다.
               <br />
               하지만 행동은 아무나 할 수 없습니다.
               <br />
-              지금 바로 시작해보세요.
+              지금 바로 여러분의 사랑을 찾아보세요.
             </MessaegSubtitleContent>
           </MessageSubtitle>
         </MessageContentContainer>
         <MessageImgContainer>
           <Image
-            src='/moving.jpg'
+            src='/couple.jpg'
             alt='move yourself'
             layout='fill'
             objectFit='cover'

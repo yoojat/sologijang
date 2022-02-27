@@ -15,11 +15,12 @@ md:mt-24
 `;
 
 const Footer = tw.footer`
-  bg-green-900
+  text-[#EFDCCA]
   w-full
   py-5
-  text-white
+  bg-[#FD4155]
   text-center
+  font-semibold
 `;
 
 interface IProps {
@@ -56,7 +57,7 @@ export default function Layout({ children }: IProps) {
       />
       <ContentLayout $isSideMenuShow={isSideMenuShow}>
         <>{children}</>
-        <Footer>100WEBSITES</Footer>
+        <Footer>솔로 기장</Footer>
       </ContentLayout>
     </>
   );

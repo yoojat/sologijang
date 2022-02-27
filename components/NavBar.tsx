@@ -7,27 +7,32 @@ const TopBarWrapper = tw.div`
 justify-between
 items-center
 flex
-h-20
-md:h-24
+h-28
+md:h-28
 px-7
 lg:px-24
 fixed
 w-full
-bg-white
+bg-[#FF5061]
 `;
 
 const MenuBarContainer = tw.div`
 block
 z-50
 lg:hidden
+`;
 
+const TopLogoContainer = tw.div`
+  flex
+  justify-center
+  items-center
 `;
 
 const ImageContainer = tw.div`
 w-36
-h-16
+h-20
 relative
-mt-5
+mt-2
 `;
 
 const MenuContainer = tw.div<{ $isSideMenuShow: boolean }>`
@@ -49,7 +54,7 @@ lg:flex
 lg:relative
 lg:space-x-7
 text-lg
-bg-zinc-100
+bg-[#FF3E53]
 z-50
 px-8
 pt-5
@@ -70,6 +75,7 @@ const TopMenuItem = tw.div`
 text-base
 font-medium
 pb-5
+text-white
 `;
 
 const DarkCover = tw.div<{ $isSideMenuShow: boolean }>`
@@ -109,20 +115,29 @@ export default function NavBar({
   return (
     <>
       <TopBarWrapper>
-        <Link href='/'>
-          <a>
-            <ImageContainer>
-              <Image
-                src={logo}
-                alt={title}
-                // width={170}
-                // height={100}
-                layout='fill'
-                objectFit='contain'
-              />
-            </ImageContainer>
-          </a>
-        </Link>
+        <TopLogoContainer>
+          <Link href='/'>
+            <a>
+              <ImageContainer>
+                <Image
+                  src={logo}
+                  alt={title}
+                  // width={170}
+                  // height={100}
+                  layout='fill'
+                  objectFit='contain'
+                />
+              </ImageContainer>
+            </a>
+          </Link>
+          <Link href='/'>
+            <a>
+              <span className='pl-10 text-3xl font-medium text-white'>
+                솔로기장
+              </span>
+            </a>
+          </Link>
+        </TopLogoContainer>
         <MenuContainer $isSideMenuShow={isSideMenuShow}>
           <SideBarLogoContainer>
             <Link href='/'>
@@ -150,9 +165,9 @@ export default function NavBar({
           <MenuBarIcon
             $isSideMenuShow={isSideMenuShow}
             xmlns='http://www.w3.org/2000/svg'
-            fill='none'
+            fill='white'
             viewBox='0 0 24 24'
-            stroke='currentColor'
+            stroke='white'
           >
             <path
               strokeLinecap='round'
@@ -166,7 +181,7 @@ export default function NavBar({
             $isSideMenuShow={isSideMenuShow}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 20 20'
-            fill='currentColor'
+            fill='white'
           >
             <path
               fillRule='evenodd'

@@ -30,7 +30,7 @@ const DescriptionBox = tw.div`
   w-full
 `;
 const TitleDescription = tw.h2`
-  text-green-900
+  text-[#FD4155]
   text-2xl
   mb-3
 `;

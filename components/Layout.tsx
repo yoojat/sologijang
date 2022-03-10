@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import NavBar from './NavBar';
 import tw from 'tailwind-styled-components';
-import { bgColor, menus } from '@libs/options';
+import { bgColor, logo, menus } from '@libs/options';
 import { mediaSize } from '@libs/media';
 import { Router } from 'next/router';
+import Image from 'next/image';
 
 const ContentLayout = tw.div<{ $isSideMenuShow: boolean }>`
 ${(_) => bgColor}
@@ -57,7 +58,16 @@ export default function Layout({ children }: IProps) {
       />
       <ContentLayout $isSideMenuShow={isSideMenuShow}>
         <>{children}</>
-        <Footer>솔로 기장</Footer>
+        <Footer>
+          <Image
+            alt={'솔로기장 로고'}
+            src={logo}
+            width={100}
+            height={50}
+            objectFit='contain'
+          />
+          <div>솔로 기장</div>
+        </Footer>
       </ContentLayout>
     </>
   );

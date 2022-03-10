@@ -2,9 +2,10 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 import tw from 'tailwind-styled-components';
 import BodyItem from '@components/BodyItem';
+import Link from 'next/link';
 
 const TopSection = tw.div`
-  pt-14
+  pt-10
   px-10
   pb-20
   bg-red-300
@@ -98,7 +99,7 @@ const MessageTitle = tw.h1`
   mb-7
 `;
 
-const MessageSubtitle = tw.h2`
+const MessageSubtitle = tw.div`
   text-slate-500
   font-normal
 `;
@@ -137,7 +138,11 @@ const Home: NextPage = () => {
                 <br />
               </SubText>
               <ButotnContainer>
-                <ContactBtn>신청하기</ContactBtn>
+                <Link href={'/join'}>
+                  <a>
+                    <ContactBtn>신청하기</ContactBtn>
+                  </a>
+                </Link>
               </ButotnContainer>
             </TitleContainer>
           </HeadSection>
@@ -146,9 +151,9 @@ const Home: NextPage = () => {
               <Image
                 src={'/main.png'}
                 alt='couple_making'
-                width={400}
-                height={300}
-                objectFit='cover' // change to suit your needs
+                width={500}
+                height={500}
+                objectFit='contain' // change to suit your needs
                 className='rounded-tr-3xl' // just an example
               />
             </ImageContainer>

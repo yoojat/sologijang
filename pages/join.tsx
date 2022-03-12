@@ -8,7 +8,7 @@ import PortfolioItem from '@components/PortfolioItem';
 const Header = tw.div`
   pt-28
   px-10
-  pb-28
+  pb-20
   bg-white
   text-center
 `;
@@ -104,6 +104,14 @@ const Join: NextPage = () => {
           메일을 보내주세요.
           <br />
           상시로 여러분들의 연락을 기다리고 있습니다.
+          <br />
+          이름 / 나이 / 살고 계신 곳 / 이상형 <br />
+          본인 사진 / 카카오톡 아이디 / 자기소개를
+          <br />
+          아래 메일로 보내주세요!
+          <br />
+          <br />
+          <span className='text-lg'>yooja.ty@gmail.com</span>
         </TopSubtitle>
       </Header>
       <MailInfoSection>

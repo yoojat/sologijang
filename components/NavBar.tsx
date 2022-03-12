@@ -132,7 +132,7 @@ export default function NavBar({
           </Link>
           <Link href='/'>
             <a>
-              <span className='pl-10 text-3xl font-medium text-white'>
+              <span className='pl-5 text-2xl font-medium text-white sm:text-3xl'>
                 솔로기장
               </span>
             </a>

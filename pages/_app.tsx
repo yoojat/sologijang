@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           description: '인연을 찾는 곳',
           images: [
             {
-              url: 'https://sologijang.vercel.app/logo.jpg',
+              url: 'https://sologijang.vercel.app/logo_sns.jpg',
               width: 800,
               height: 600,
               alt: '솔로 기장',

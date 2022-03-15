@@ -71,6 +71,9 @@ const IntroduceItem = styled.div`
 const IntroduceImageContainer = tw.div`
 text-center
 -z-50
+span{
+  drop-shadow-2xl
+}
 `;
 const IntroduceText = tw.div`
   mt-2
@@ -78,6 +81,7 @@ const IntroduceText = tw.div`
   p-5
   xl:p-5
   sm:mt-0
+  drop-shadow-2xl
 `;
 const IntroduceTitle = tw.h2`
   text-center
@@ -124,7 +128,12 @@ const Portfolio: NextPage = () => {
               <br />
               어떤일을 해도 “남매가 일을 잘한다.”라는 말을 들어왔습니다.
               <br />
-              이제는 여러분들의 인연을 찾는 일을 잘해보겠습니다.
+              오빠인 저는 축가, 사회, 행사 진행 등 이벤트를 기획하는
+              전문가입니다.
+              <br />
+              행사 진행을 하면서 감동과 재미를 주는 일을 할 때가 가장 행복하죠.
+              <br />
+              이제는 여러분들의 인연을 찾는 일에 감동을 드리도록 하겠습니다.
               <br />
               믿고 신청해주세요!
             </IntroduceDescription>

@@ -16,7 +16,7 @@ const Header = tw.div`
 const TopSmallTitle = tw.div`
 text-red-300
   font-medium
-  pb-8
+  pb-4
 `;
 const TopTitle = tw.h1`
 text-[#FF3E53]
@@ -24,7 +24,7 @@ text-[#FF3E53]
   break-words
 `;
 const TopSubtitle = tw.h2`
-  pt-7
+  pt-4
   text-red-300
   font-medium
   text-lg

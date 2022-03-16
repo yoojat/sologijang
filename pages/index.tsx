@@ -64,7 +64,7 @@ const ContactBtn = tw.button`
 hover:bg-red-500
   transition-all
   duration-300
-  active:bg-emerald-900
+  active:bg-red-400
 `;
 
 const ImageContainer = tw.div`

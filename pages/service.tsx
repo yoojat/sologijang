@@ -12,12 +12,13 @@ const Header = tw.div`
   bg-[url('/sea.jpg')]
   bg-cover
   text-center
+  text-shadow-xl
 `;
 
 const TopSmallTitle = tw.div`
 text-red-100
   font-medium
-  pb-2
+  pb-1
 `;
 const TopTitle = tw.h1`
 text-white
@@ -26,7 +27,7 @@ font-bold
   break-words
 `;
 const TopSubtitle = tw.h2`
-  pt-4
+  pt-2
   text-white
   font-medium
   text-md
@@ -50,7 +51,6 @@ hover:font-bold
 max-w-sm
   transition-all
   duration-300
-  active:bg-emerald-900
 `;
 const IntroduceSection = tw.section`
   pt-10
@@ -171,7 +171,6 @@ const Service: NextPage = () => {
   return (
     <>
       <Header>
-        <TopSmallTitle>솔로 기장</TopSmallTitle>
         <TopTitle>2박 3일간 인연을 찾는 시간</TopTitle>
         <TopSubtitle>
           준비가 되어있으신가요?
@@ -281,7 +280,9 @@ border-slate-400 px-20 text-slate-400'
               <br />
               <p>- 단체 일정과 커플 일정이 따로 주어지게 됩니다.</p>
               <br />
-              <p>좀 설레도 됩니다. 곧 만날거니까.</p>
+              <p className='text-center text-red-300'>
+                좀 설레도 됩니다. 곧 만날거니까.
+              </p>
             </IntroduceDescription>
           </IntroduceText>
         </IntroduceItem>
@@ -290,7 +291,7 @@ border-slate-400 px-20 text-slate-400'
       <GijangIntroductionSection>
         <div className=''>
           <h3 className='text-3xl font-bold'>
-            즐길거리가 많은 기장, 데이트 장소 걱정 따로 안혀서도 됩니다.
+            즐길거리가 많은 기장, 데이트 장소 걱정 따로 안하셔도 됩니다.
           </h3>
         </div>
         <GijangIntroduceItem className='w-full max-w-7xl items-center odd:flex-row-reverse lg:flex lg:space-x-10'>
@@ -308,11 +309,11 @@ border-slate-400 px-20 text-slate-400'
             <GijangIntroduceDescription>
               싱싱하고 아주 맛있는 해산물로 유명한 해녀촌입니다.
               <br />
-              해산물 뿐만 아니라 전복죽도 유명한 곳입니다.
+              해산물뿐만 아니라 전복죽도 유명한 곳입니다.
               <br />
               연화리 바다 경치와 바다 소리와 함께
               <br />
-              신선하고 탱글탱글하고 오독오독한 해산물을 즐길수 있습니다.
+              신선하고 탱글탱글하고 오독오독한 해산물을 즐길 수 있습니다.
               <br />
               걷기도 좋은 산책 코스도 있으니 데이트 장소로도 손색이 없습니다.
             </GijangIntroduceDescription>
@@ -338,14 +339,14 @@ border-slate-400 px-20 text-slate-400'
               <br />
               동물과 농장이 연상되는 디자인 테마구역들이 조성되어 있고,
               <br />
-              이에 맞추어 어트래션들도 동물과 농장ㅇ을 주제로 설계된 모습을
-              확인할 수 있습니다.
+              이에 맞추어 어트랙션들도 동물과 농장을 주제로 설계된 모습을 확인할
+              수 있습니다.
               <br />
-              국내 최초로 도입되는 롤러코스터 2종을 비롯한 17종의 탑승시설과
+              국내 최초로 도입되는 롤러코스터 2종을 비롯한 17종의 탑승 시설과
               관람시설을 먼저 손보이며
               <br />
               이후 순차적으로 시설을 늘려갈 예정입니다.
-              <br />그 밖에 차별화된 공연과 퍼레드로 풍성한 볼거리를 제공할
+              <br />그 밖에 차별화된 공연과 퍼레이드로 풍성한 볼거리를 제공할
               예정입니다.
             </GijangIntroduceDescription>
           </GijangIntroduceText>
@@ -366,9 +367,9 @@ border-slate-400 px-20 text-slate-400'
               스웨덴의 가구 및 생활 소품을 판매하는 다국적 기업으로 오시리아
               관광단지에 위치하고 있습니다.
               <br />
-              주방, 거실, 아이방, 침실 등의 쇼룸을 보는 재미가 있는 곳입니다.
+              주방, 거실, 아이 방, 침실 등의 쇼룸을 보는 재미가 있는 곳입니다.
               <br />
-              잘 꾸며 놓았기 때문에 인테리어시 참고할수도 있습니다.
+              잘 꾸며 놓았기 때문에 인테리어 시 참고할 수도 있습니다.
               <br />
               이케아 내 식사도 가능하기 때문에 구경하는 재미와 먹는 재미 둘 다
               잡을 수 있는 곳입니다.
@@ -388,13 +389,13 @@ border-slate-400 px-20 text-slate-400'
           <GijangIntroduceText>
             <GijangIntroduceTitle>동부산 아울렛</GijangIntroduceTitle>
             <GijangIntroduceDescription>
-              그리스 산토리니에 온 것만 같은 기분을 느끼며 쇼핑해볼 수 있는
+              그리스 산토리니에 온 것만 같은 기분을 느끼며 쇼핑해 볼 수 있는
               곳입니다.
               <br />
               입구부터 커다란 기둥들이 고대 그리스 신전에 들어가는 느낌이 들도록
               합니다.
               <br />
-              옥상 3층은 부산야경촬영 명소로 유명한 곳으로 기분을 전환하기에는
+              옥상 3층은 부산 야경촬영 명소로 유명한 곳으로 기분을 전환하기에는
               제격이죠.
               <br />
             </GijangIntroduceDescription>

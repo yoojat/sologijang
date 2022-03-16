@@ -29,7 +29,10 @@ const ImageSection = tw.section`
   lg:block
 `;
 
-const TitleContainer = tw.div``;
+const TitleContainer = tw.div`
+mt-16
+sm:mt-0
+`;
 const TopSmallTitle = tw.div`
   text-red-500
   font-bold

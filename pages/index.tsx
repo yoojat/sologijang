@@ -60,7 +60,7 @@ const ContactBtn = tw.button`
   w-full
   rounded-md
   py-3
-  mb-10
+  mb-3
   text-white
   font-bold
   cursor-pointer
@@ -89,7 +89,7 @@ const MessageSection = tw.section`
 
 const MessageContentContainer = tw.div`
   max-w-7xl
-  pl-10
+  px-10
   lg:pl-40
   pt-10
   pb-10
@@ -135,7 +135,7 @@ const Home: NextPage = () => {
               <SubText>
                 결혼을 간절히 원하시나요?
                 <br />
-                여러분의 인연을 찾을 수 있는 기회를 드립니다.
+                2박 3일간 인연을 찾을 수 있는 기회를 드립니다.
                 <br />
                 솔로기장의 주인공이 되어보세요!
                 <br />
@@ -144,6 +144,15 @@ const Home: NextPage = () => {
                 <Link href={'/join'}>
                   <a>
                     <ContactBtn>신청하기</ContactBtn>
+                  </a>
+                </Link>
+              </ButotnContainer>
+              <ButotnContainer>
+                <Link href={'/service'}>
+                  <a>
+                    <ContactBtn className='bg-orange-500 hover:bg-orange-600'>
+                      솔로기장이란?
+                    </ContactBtn>
                   </a>
                 </Link>
               </ButotnContainer>

@@ -243,7 +243,7 @@ border-slate-400 px-20 text-slate-400'
             <IntroduceTitle>야심차게 준비했습니다.</IntroduceTitle>
             <IntroduceDescription>
               <p>
-                자난 1여년간 고민과 기획을 수없이 한 끝에 이렇게 “솔로 기장”을
+                지난 1여년간 고민과 기획을 수없이 한 끝에 이렇게 “솔로 기장”을
                 공개하게 되었습니다.
               </p>
               <br />

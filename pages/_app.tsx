@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <NextSeo
         title='솔로 기장'
-        description='진정한 인연을 간질히 원하는 솔로남녀의 2박 3일간의 여정'
+        description='진정한 인연을 간절히 원하는 솔로남녀의 2박 3일간의 여정'
         canonical='https://sologijang.vercel.app'
         openGraph={{
           url: 'https://sologijang.vercel.app',

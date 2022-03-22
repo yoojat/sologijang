@@ -24,15 +24,15 @@ function MyApp({ Component, pageProps }: AppProps) {
       <NextSeo
         title='솔로 기장'
         description='진정한 인연을 간절히 원하는 솔로남녀의 2박 3일간의 여정'
-        canonical='https://sologijang.vercel.app'
+        canonical='https://www.sologijang.com'
         openGraph={{
-          url: 'https://sologijang.vercel.app',
+          url: 'https://www.sologijang.com',
           title: '솔로 기장',
           description:
             '진정한 인연을 간질히 원하는 솔로남녀의 2박 3일간의 여정',
           images: [
             {
-              url: 'https://sologijang.vercel.app/logo_sns.jpg',
+              url: 'https://wwww.sologijang.com/logo_sns.jpg',
               width: 800,
               height: 600,
               alt: '솔로 기장',

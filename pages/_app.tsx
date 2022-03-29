@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           url: 'https://www.sologijang.com',
           title: '솔로 기장',
           description:
-            '진정한 인연을 간질히 원하는 솔로남녀의 2박 3일간의 여정',
+            '진정한 인연을 간절히 원하는 솔로남녀의 2박 3일간의 여정',
           images: [
             {
               url: 'https://wwww.sologijang.com/logo_sns.jpg',

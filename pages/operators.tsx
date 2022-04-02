@@ -6,15 +6,16 @@ import Link from 'next/link';
 import PortfolioItem from '@components/PortfolioItem';
 
 const Header = tw.div`
-  pt-14
+  pt-28
   px-10
   pb-4
-  bg-orange-50
+  bg-gradient-to-b
+  from-rose-300
   text-center
 `;
 
 const TopSmallTitle = tw.div`
-text-red-300
+text-rose-500
   font-medium
   pb-8
 `;

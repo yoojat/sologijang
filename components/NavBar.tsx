@@ -13,7 +13,6 @@ px-7
 lg:px-24
 fixed
 w-full
-bg-[#FF5061]
 `;
 
 const MenuBarContainer = tw.div`
@@ -76,6 +75,7 @@ text-base
 font-medium
 pb-5
 text-white
+
 `;
 
 const DarkCover = tw.div<{ $isSideMenuShow: boolean }>`

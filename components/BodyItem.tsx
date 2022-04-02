@@ -69,6 +69,7 @@ export default function BodyItem({
           // height={500}
           layout='fill'
           objectFit='cover'
+          className='rounded-xl' // just an example
         />
       </DescriptionImage>
 

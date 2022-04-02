@@ -1,16 +1,17 @@
+/* eslint-disable @next/next/no-img-element */
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import tw from 'tailwind-styled-components';
 import BodyItem from '@components/BodyItem';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 import Link from 'next/link';
 
 const TopSection = tw.div`
-  pt-10
-  px-10
-  pb-20
-  bg-red-300
-
+  pb-5
+  relative
 `;
+
 const TopContentContainer = tw.div`
   flex
   lg:justify-between
@@ -18,6 +19,12 @@ const TopContentContainer = tw.div`
   flex-wrap
   max-w-screen-lg
   mx-auto
+  absolute
+  bottom-28
+  w-full
+  sm:bottom-40
+  lg:bottom-64
+  md:left-20
 `;
 
 const HeadSection = tw.section`
@@ -32,32 +39,37 @@ const ImageSection = tw.section`
 const TitleContainer = tw.div`
 mt-16
 sm:mt-0
+mx-12
 `;
 const TopSmallTitle = tw.div`
-  text-red-500
-  font-bold
-  pb-4
-  h1{
-    text-lg
-  }
+text-rose-500
+font-bold
+  pb-1
+  text-sm
+  sm:text-lg
 `;
 const BigTitle = tw.div`
-  text-[#FF3E53]
-  text-3xl
+  text-rose-400
+  text-2xl
   font-bold
   break-words
+  sm:text-5xl
 `;
 const SubText = tw.div`
-  pt-7
+  pt-3
   text-white
   font-medium
-  text-2xl
+  text-md
   pb-7
+  sm:text-lg
 `;
-const ButotnContainer = tw.div``;
+const ButotnContainer = tw.div`
+mt-10
+  text-center
+  `;
 const ContactBtn = tw.button`
   bg-[#FF3E53]
-  w-full
+  w-4/5
   rounded-md
   py-3
   mb-3
@@ -68,6 +80,7 @@ hover:bg-red-500
   transition-all
   duration-300
   active:bg-red-400
+  max-w-3xl
 `;
 
 const ImageContainer = tw.div`
@@ -123,6 +136,33 @@ const Home: NextPage = () => {
   return (
     <>
       <TopSection>
+        <Carousel
+          autoPlay={true}
+          infiniteLoop={true}
+          showIndicators={false}
+          showStatus={false}
+          showThumbs={false}
+          showArrows={false}
+        >
+          <div>
+            <img alt='배경1' src='bg/bg1.png' />
+          </div>
+          <div>
+            <img alt='배경2' src='bg/bg2.png' />
+          </div>
+          <div>
+            <img alt='배경3' src='bg/bg3.png' />
+          </div>
+          <div>
+            <img alt='배경4' src='bg/bg4.png' />
+          </div>
+          <div>
+            <img alt='배경5' src='bg/bg5.png' />
+          </div>
+          <div>
+            <img alt='배경6' src='bg/bg6.png' />
+          </div>
+        </Carousel>
         <TopContentContainer>
           <HeadSection>
             <TitleContainer>
@@ -140,37 +180,16 @@ const Home: NextPage = () => {
                 솔로기장의 주인공이 되어보세요!
                 <br />
               </SubText>
-              <ButotnContainer>
-                <Link href={'/join'}>
-                  <a>
-                    <ContactBtn>신청하기</ContactBtn>
-                  </a>
-                </Link>
-              </ButotnContainer>
-              <ButotnContainer>
-                <Link href={'/service'}>
-                  <a>
-                    <ContactBtn className='bg-orange-500 hover:bg-orange-600'>
-                      솔로기장이란?
-                    </ContactBtn>
-                  </a>
-                </Link>
-              </ButotnContainer>
             </TitleContainer>
           </HeadSection>
-          <ImageSection>
-            <ImageContainer>
-              <Image
-                src={'/main.png'}
-                alt='couple_making'
-                width={500}
-                height={500}
-                objectFit='contain' // change to suit your needs
-                className='rounded-tr-3xl' // just an example
-              />
-            </ImageContainer>
-          </ImageSection>
         </TopContentContainer>
+        <ButotnContainer>
+          <Link href={'/join'}>
+            <a>
+              <ContactBtn>신청하기</ContactBtn>
+            </a>
+          </Link>
+        </ButotnContainer>
       </TopSection>
       <BodySection>
         <BodyItem

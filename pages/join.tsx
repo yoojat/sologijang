@@ -9,26 +9,32 @@ const Header = tw.div`
   pt-28
   px-10
   pb-20
-  bg-white
+  bg-[url('/bg/bg1.png')]
+  bg-cover
   text-center
 `;
 
 const TopSmallTitle = tw.div`
-text-red-300
+text-red-200
   font-medium
   pb-4
+  text-shadow-sm
 `;
 const TopTitle = tw.h1`
 text-[#FF3E53]
   text-3xl
   break-words
+  font-normal
+  text-shadow-sm
+
 `;
 const TopSubtitle = tw.h2`
   pt-4
-  text-red-300
+  text-red-100
   font-medium
   text-lg
   pb-7
+  text-shadow-lg
 `;
 const MailInfoSection = tw.section`
   pt-10

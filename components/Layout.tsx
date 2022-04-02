@@ -10,8 +10,6 @@ const ContentLayout = tw.div<{ $isSideMenuShow: boolean }>`
 ${(_) => bgColor}
 absolute
 w-full
-mt-20
-md:mt-24
 -z-50
 `;
 

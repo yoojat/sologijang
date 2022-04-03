@@ -104,7 +104,7 @@ const Join: NextPage = () => {
   return (
     <>
       <Header>
-        <TopSmallTitle>준비할건 설레이는 마음 뿐.</TopSmallTitle>
+        <TopSmallTitle>준비할건 설레는 마음뿐.</TopSmallTitle>
         <TopTitle>참여방법은 간단합니다.</TopTitle>
         <TopSubtitle>
           메일을 보내주세요.

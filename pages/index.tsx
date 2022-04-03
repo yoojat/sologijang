@@ -22,9 +22,8 @@ const TopContentContainer = tw.div`
   max-w-screen-lg
   mx-auto
   absolute
-  bottom-28
+  bottom-40
   w-full
-  sm:bottom-40
   lg:bottom-64
   md:left-20
 `;
@@ -52,7 +51,7 @@ font-medium
   text-shadow-lg
 `;
 const BigTitle = tw.div`
-  text-rose-300
+  text-rose-500
   text-2xl
   font-bold
   break-words
@@ -138,7 +137,6 @@ const MessageImgContainer = tw.div`
 
 const Home: NextPage = () => {
   const windowSize = useWindowSize();
-  console.log({ windowSize }, { mediaSize });
   return (
     <>
       <TopSection>
@@ -284,13 +282,13 @@ const Home: NextPage = () => {
                 <h3 className='hidden sm:block'>현실 커플 매치</h3>
               </TopSmallTitle>
               <BigTitle>
-                <h1>솔로 모집중!</h1>
+                <h1>솔로 모집 중!</h1>
               </BigTitle>
               <SubText>
                 <span>2박 3일간 인연을 찾을 수 있는 기회를 드립니다.</span>
                 <br />
                 <span className='hidden sm:block'>
-                  솔로기장의 주인공이 되어보세요!
+                  솔로 기장의 주인공이 되어보세요!
                 </span>
               </SubText>
             </TitleContainer>
@@ -313,25 +311,25 @@ const Home: NextPage = () => {
           smallDescriptionTitle={'그냥 신청만 해주세요.'}
           smallSubDescriptionContents={[
             '매일 마주하는 일상의 틀을 벗어나 새로운 사람을 만날 수 있게 해드릴게요.',
-            '새로운 연인을 만날 설레임에 두근거리지 않나요?',
+            '새로운 연인을 만날 설렘에 두근거리지 않나요?',
           ]}
         />
         <BodyItem
           imageSrc={'/wait.jpg'}
           imageAlt={'what are you waiting for'}
-          titleDescription={'무엇을 기다리고 계신가요?'}
+          titleDescription={'무엇을 기다리고 계시나요?'}
           subtitleDescription={'먼저 움직이세요!'}
           smallDescriptionTitle={'저희가 도와드릴게요.'}
           smallSubDescriptionContents={[
-            '마음이 가는대로, 심장이 시키는대로 하세요',
-            '그리 어려울건 없습니다.',
+            '마음이 가는 대로, 심장이 시키는 대로 하세요.',
+            '그리 어려울 건 없습니다.',
             '단, 가벼운 마음은 안됩니다.',
           ]}
         />
         <BodyItem
           imageSrc={'/marry.jpg'}
           imageAlt={'pls only seriously people'}
-          titleDescription={'결혼을 간절히 원하시는 분만 지원해주세요!'}
+          titleDescription={'결혼을 간절히 원하시는 분만 지원해 주세요!'}
           subtitleDescription={'정말 간절한 분들에게만 기회를 드리고 싶습니다.'}
           smallDescriptionTitle={'가벼운 마음으로 오는 곳이 아닙니다.'}
           smallSubDescriptionContents={[
@@ -342,10 +340,10 @@ const Home: NextPage = () => {
       </BodySection>
       <MessageSection>
         <MessageContentContainer>
-          <MessageTitle>솔로가 커플이 되는 곳, 솔로기장</MessageTitle>
+          <MessageTitle>솔로가 커플이 되는 곳, 솔로 기장</MessageTitle>
           <MessageSubtitle>
             <MessageSubtitleHead>
-              솔로기장, 그곳에서 만들어지는 무궁무진한 이야기
+              솔로 기장, 그곳에서 만들어지는 무궁무진한 이야기
             </MessageSubtitleHead>
             <MessaegSubtitleContent>
               생각은 누구나 할 수 있습니다.

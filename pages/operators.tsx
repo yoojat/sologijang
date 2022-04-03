@@ -127,7 +127,7 @@ const Portfolio: NextPage = () => {
               어릴 땐 자주 싸우긴 했지만 철이 든 지금은 누구보다 호흡이 잘
               맞습니다.
               <br />
-              어떤일을 해도 “남매가 일을 잘한다.”라는 말을 들어왔습니다.
+              어떤 일을 해도 “남매가 일을 잘한다.”라는 말을 들어왔습니다.
               <br />
               오빠인 저는 축가, 사회, 행사 진행 등 이벤트를 기획하는
               전문가입니다.
@@ -136,7 +136,7 @@ const Portfolio: NextPage = () => {
               <br />
               이제는 여러분들의 인연을 찾는 일에 감동을 드리도록 하겠습니다.
               <br />
-              믿고 신청해주세요!
+              믿고 신청해 주세요!
             </IntroduceDescription>
           </IntroduceText>
         </IntroduceItem>
@@ -153,9 +153,9 @@ const Portfolio: NextPage = () => {
           <IntroduceText>
             <IntroduceTitle>왜 기장이죠?</IntroduceTitle>
             <IntroduceDescription>
-              저희 운영자들은 10년 넘게 기장에서 살아 왔습니다.
+              저희 운영자들은 10년 넘게 기장에서 살아왔습니다.
               <br />
-              데이트 하러 온 사람들을 많이 봐왔죠.
+              데이트하러 온 사람들을 많이 봐왔죠.
               <br />
               기장은 커플이 데이트하러 오기 좋은 장소가 아닙니다.
               <br />
@@ -176,13 +176,13 @@ const Portfolio: NextPage = () => {
           <IntroduceText>
             <IntroduceTitle>신청에 망설여지시나요?</IntroduceTitle>
             <IntroduceDescription>
-              연인을 찾는 다는 강박은 내려두고 편한 마음으로 오시기 바랍니다.
+              연인을 찾는다는 강박은 내려두고 편한 마음으로 오시기 바랍니다.
               <br />
               저희는 커플이 되는 과정을 제공합니다.
               <br />
               사랑을 찾아가는 과정은 자기 자신을 찾아가는 과정이기도 합니다.
               <br />
-              많은 걸 얻어가세요.
+              많은 걸 얻어 가세요.
             </IntroduceDescription>
           </IntroduceText>
         </IntroduceItem>

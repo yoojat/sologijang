@@ -6,6 +6,8 @@ import BodyItem from '@components/BodyItem';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import Link from 'next/link';
+import useWindowSize from '@libs/useWindowSize';
+import { mediaSize } from '@libs/media';
 
 const TopSection = tw.div`
   pb-5
@@ -135,37 +137,146 @@ const MessageImgContainer = tw.div`
 `;
 
 const Home: NextPage = () => {
+  const windowSize = useWindowSize();
+  console.log({ windowSize }, { mediaSize });
   return (
     <>
       <TopSection>
-        <Carousel
-          autoPlay={true}
-          infiniteLoop={true}
-          showIndicators={false}
-          showStatus={false}
-          showThumbs={false}
-          showArrows={false}
-          interval={5000}
-        >
-          <div>
-            <img alt='배경1' src='bg/bg1.png' />
-          </div>
-          <div>
-            <img alt='배경2' src='bg/bg2.png' />
-          </div>
-          <div>
-            <img alt='배경3' src='bg/bg3.png' />
-          </div>
-          <div>
-            <img alt='배경4' src='bg/bg4.png' />
-          </div>
-          <div>
-            <img alt='배경5' src='bg/bg5.png' />
-          </div>
-          <div>
-            <img alt='배경6' src='bg/bg6.png' />
-          </div>
-        </Carousel>
+        {windowSize &&
+        windowSize.width &&
+        windowSize.width > mediaSize.mobile ? (
+          <Carousel
+            autoPlay={true}
+            infiniteLoop={true}
+            showIndicators={false}
+            showStatus={false}
+            showThumbs={false}
+            showArrows={false}
+            interval={5000}
+          >
+            <Image
+              alt='배경1'
+              src='/bg/bg1.png'
+              width={5000}
+              height={2813}
+              objectFit='contain'
+            />
+            <Image
+              alt='배경2'
+              src='/bg/bg2.png'
+              width={5000}
+              height={2813}
+              objectFit='contain'
+            />
+            <Image
+              alt='배경3'
+              src='/bg/bg3.png'
+              width={5000}
+              height={2813}
+              objectFit='contain'
+            />
+            <Image
+              alt='배경4'
+              src='/bg/bg4.png'
+              width={5000}
+              height={2813}
+              objectFit='contain'
+            />
+            <Image
+              alt='배경'
+              src='/bg/bg5.png'
+              width={5000}
+              height={2813}
+              objectFit='contain'
+            />
+            <Image
+              alt='배경'
+              src='/bg/bg6.png'
+              width={5000}
+              height={2813}
+              objectFit='contain'
+            />
+            {/* <div>
+              <img alt='배경1' src='bg/bg1.png' />
+            </div>
+            <div>
+              <img alt='배경2' src='bg/bg2.png' />
+            </div>
+            <div>
+              <img alt='배경3' src='bg/bg3.png' />
+            </div>
+            <div>
+              <img alt='배경4' src='bg/bg4.png' />
+            </div>
+            <div>
+              <img alt='배경5' src='bg/bg5.png' />
+            </div>
+            <div>
+              <img alt='배경6' src='bg/bg6.png' />
+            </div> */}
+          </Carousel>
+        ) : (
+          <Carousel
+            autoPlay={true}
+            infiniteLoop={true}
+            showIndicators={false}
+            showStatus={false}
+            showThumbs={false}
+            showArrows={false}
+            interval={5000}
+          >
+            <Image
+              alt='모바일 메인 이미지1'
+              src='/mobile_bg/mobile_main1.png'
+              width={800}
+              height={1000}
+              objectFit='contain'
+            />
+            <Image
+              alt='모바일 메인 이미지2'
+              src='/mobile_bg/mobile_main2.png'
+              width={800}
+              height={1000}
+              objectFit='contain'
+            />
+            <Image
+              alt='모바일 메인 이미지3'
+              src='/mobile_bg/mobile_main3.png'
+              width={800}
+              height={1000}
+              objectFit='contain'
+            />
+            <Image
+              alt='모바일 메인 이미지4'
+              src='/mobile_bg/mobile_main4.png'
+              width={800}
+              height={1000}
+              objectFit='contain'
+            />
+            <Image
+              alt='모바일 메인 이미지5'
+              src='/mobile_bg/mobile_main5.png'
+              width={800}
+              height={1000}
+              objectFit='contain'
+            />
+            <Image
+              alt='모바일 메인 이미지6'
+              src='/mobile_bg/mobile_main6.png'
+              width={800}
+              height={1000}
+              objectFit='contain'
+            />
+            <Image
+              alt='모바일 메인 이미지7'
+              src='/mobile_bg/mobile_main7.png'
+              width={800}
+              height={1000}
+              objectFit='contain'
+            />
+          </Carousel>
+        )}
+
         <TopContentContainer>
           <HeadSection>
             <TitleContainer>

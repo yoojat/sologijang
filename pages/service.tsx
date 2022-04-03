@@ -34,7 +34,8 @@ const TopSubtitle = tw.h2`
   pb-3
 `;
 
-const ButotnContainer = tw.div``;
+const ButotnContainer = tw.div`
+px-5`;
 const ContactBtn = tw.button`
 border
 border-white

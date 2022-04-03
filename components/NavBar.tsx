@@ -48,7 +48,7 @@ lg:flex
 lg:relative
 lg:space-x-7
 text-lg
-bg-[#FF3E53]
+bg-[#fda4af]
 z-50
 px-8
 pt-5
@@ -87,7 +87,7 @@ fixed
 const SideBarLogoContainer = tw.div`
 lg:hidden
 border-b
-border-b-gray-400
+border-b-slate-200
 mb-5
 `;
 

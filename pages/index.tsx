@@ -42,26 +42,28 @@ sm:mt-0
 mx-12
 `;
 const TopSmallTitle = tw.div`
-text-rose-500
-font-bold
+text-rose-200
+font-medium
   pb-1
   text-sm
   sm:text-lg
+  text-shadow-lg
 `;
 const BigTitle = tw.div`
-  text-rose-400
+  text-rose-300
   text-2xl
   font-bold
   break-words
   sm:text-5xl
 `;
 const SubText = tw.div`
-  pt-3
+  pt-1
   text-white
   font-medium
   text-md
   pb-7
   sm:text-lg
+  text-shadow-lg
 `;
 const ButotnContainer = tw.div`
 mt-10
@@ -167,18 +169,17 @@ const Home: NextPage = () => {
           <HeadSection>
             <TitleContainer>
               <TopSmallTitle>
-                <h3>현실 커플 매치</h3>
+                <h3 className='hidden sm:block'>현실 커플 매치</h3>
               </TopSmallTitle>
               <BigTitle>
                 <h1>솔로 모집중!</h1>
               </BigTitle>
               <SubText>
-                결혼을 간절히 원하시나요?
+                <span>2박 3일간 인연을 찾을 수 있는 기회를 드립니다.</span>
                 <br />
-                2박 3일간 인연을 찾을 수 있는 기회를 드립니다.
-                <br />
-                솔로기장의 주인공이 되어보세요!
-                <br />
+                <span className='hidden sm:block'>
+                  솔로기장의 주인공이 되어보세요!
+                </span>
               </SubText>
             </TitleContainer>
           </HeadSection>

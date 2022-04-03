@@ -17,7 +17,7 @@ const Footer = tw.footer`
   text-[#EFDCCA]
   w-full
   py-5
-  bg-[#FD4155]
+  bg-[#fda4af]
   text-center
   font-semibold
 `;

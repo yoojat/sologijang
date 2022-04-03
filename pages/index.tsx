@@ -145,6 +145,7 @@ const Home: NextPage = () => {
           showStatus={false}
           showThumbs={false}
           showArrows={false}
+          interval={5000}
         >
           <div>
             <img alt='배경1' src='bg/bg1.png' />

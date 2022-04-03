@@ -2,17 +2,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import tw from 'tailwind-styled-components';
 import { logo, title } from '@libs/options';
+import styled from 'styled-components';
+import { useEffect, useLayoutEffect, useState } from 'react';
 
-const TopBarWrapper = tw.div`
-justify-between
-items-center
-flex
-h-28
-md:h-28
-px-7
-lg:px-24
-fixed
-w-full
+const TopBarWrapper = styled.div<{ scrollTop: number }>`
+  ${(p) => (p.scrollTop > 0 ? 'background-color: #fda4af;' : '')}
+  transition:all 0.1s;
 `;
 
 const MenuBarContainer = tw.div`
@@ -112,9 +107,21 @@ export default function NavBar({
   isSideMenuShow,
   setIsSideMenuShow,
 }: IProps) {
+  const [scrollTop, setScrollTop] = useState<number>(0);
+  const handleScroll = (e: Event) => {
+    setScrollTop(document.documentElement.scrollTop);
+  };
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
-      <TopBarWrapper>
+      <TopBarWrapper
+        scrollTop={scrollTop}
+        className='fixed flex h-28 w-full items-center justify-between px-7 md:h-28 lg:px-24'
+      >
         <TopLogoContainer>
           <Link href='/'>
             <a>

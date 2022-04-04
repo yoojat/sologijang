@@ -15,7 +15,8 @@ const TopSection = tw.div`
 `;
 
 const TopContentContainer = tw.div`
-  flex
+  hidden
+  sm:flex
   lg:justify-between
   lg:items-center
   flex-wrap
@@ -66,23 +67,30 @@ const SubText = tw.div`
   sm:text-lg
   text-shadow-lg
 `;
-const ButotnContainer = tw.div`
-mt-10
+const ButtonContainer = tw.div`
   text-center
+  absolute
+  sm:relative
+  w-full
+  bottom-8
+  sm:bottom-0
+  sm:mt-10
   `;
 const ContactBtn = tw.button`
-  bg-[#FF3E53]
+border-2
+border-rose-400
+text-rose-400
   w-4/5
   rounded-md
   py-3
   mb-3
-  text-white
   font-bold
   cursor-pointer
-hover:bg-red-500
+hover:bg-rose-200
+hover:text-white
   transition-all
   duration-300
-  active:bg-red-400
+  active:bg-rose-100
   max-w-3xl
 `;
 
@@ -225,50 +233,22 @@ const Home: NextPage = () => {
           >
             <Image
               alt='모바일 메인 이미지1'
-              src='/mobile_bg/mobile_main1.png'
-              width={800}
+              src='/mobile_bg/001.png'
+              width={750}
               height={1000}
               objectFit='contain'
             />
             <Image
               alt='모바일 메인 이미지2'
-              src='/mobile_bg/mobile_main2.png'
-              width={800}
+              src='/mobile_bg/002.png'
+              width={750}
               height={1000}
               objectFit='contain'
             />
             <Image
               alt='모바일 메인 이미지3'
-              src='/mobile_bg/mobile_main3.png'
-              width={800}
-              height={1000}
-              objectFit='contain'
-            />
-            <Image
-              alt='모바일 메인 이미지4'
-              src='/mobile_bg/mobile_main4.png'
-              width={800}
-              height={1000}
-              objectFit='contain'
-            />
-            <Image
-              alt='모바일 메인 이미지5'
-              src='/mobile_bg/mobile_main5.png'
-              width={800}
-              height={1000}
-              objectFit='contain'
-            />
-            <Image
-              alt='모바일 메인 이미지6'
-              src='/mobile_bg/mobile_main6.png'
-              width={800}
-              height={1000}
-              objectFit='contain'
-            />
-            <Image
-              alt='모바일 메인 이미지7'
-              src='/mobile_bg/mobile_main7.png'
-              width={800}
+              src='/mobile_bg/003.png'
+              width={750}
               height={1000}
               objectFit='contain'
             />
@@ -294,13 +274,13 @@ const Home: NextPage = () => {
             </TitleContainer>
           </HeadSection>
         </TopContentContainer>
-        <ButotnContainer>
+        <ButtonContainer>
           <Link href={'/join'}>
             <a>
               <ContactBtn>신청하기</ContactBtn>
             </a>
           </Link>
-        </ButotnContainer>
+        </ButtonContainer>
       </TopSection>
       <BodySection>
         <BodyItem

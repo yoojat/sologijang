@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html > body {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Gothic A1', sans-serif;
   box-sizing: border-box;
   word-break: keep-all;
 }

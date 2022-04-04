@@ -12,7 +12,8 @@ const Header = tw.div`
   bg-[url('/sea.jpg')]
   bg-cover
   text-center
-  text-shadow-xl
+  hidden
+  sm:block
 `;
 
 const TopSmallTitle = tw.div`
@@ -60,7 +61,6 @@ const IntroduceSection = tw.section`
   items-center
   justify-center
   space-y-10
-  bg-orange-50
 `;
 
 const IntroduceItem = tw.div`
@@ -75,16 +75,14 @@ const IntroduceText = tw.div`
   mx-auto
 `;
 const IntroduceTitle = tw.h2`
-  text-left
-  font-normal
-  text-xl
+  text-center
+  font-light
+  text-4xl
   pb-5
-  text-slate-400
-  border-b-2
+  text-sky-900
   mb-5
-
   `;
-const IntroduceDescription = tw.p`
+const IntroduceDescription = tw.div`
   text-left
   text-sm
   font-normal
@@ -106,7 +104,6 @@ const GijangIntroductionSection = tw.section`
   pt-10
   pb-10
   px-3
-  shadow-2xl
   flex
   flex-col
   items-center
@@ -144,9 +141,6 @@ const GijangIntroduceItem = styled.div`
 const GijangIntroduceImageContainer = tw.div`
 text-center
 -z-50
-span{
-  drop-shadow-2xl
-}
 `;
 const GijangIntroduceText = tw.div`
   mt-2
@@ -154,7 +148,6 @@ const GijangIntroduceText = tw.div`
   p-5
   xl:p-5
   sm:mt-0
-  drop-shadow-2xl
 `;
 const GijangIntroduceTitle = tw.h2`
   text-center
@@ -166,6 +159,38 @@ const GijangIntroduceDescription = tw.p`
   text-center
   text-sm
   font-normal
+`;
+const ImageContainer = tw.div`
+  sm:hidden
+  relative
+`;
+
+const MobileBtnContainer = tw.div`
+  absolute
+  bottom-1
+  w-full
+  text-center
+`;
+const MobileContactBtn = tw.button`
+bg-sky-900
+text-white
+  w-44
+  rounded-sm
+  py-2
+  mb-5
+  font-light
+  cursor-pointer
+  hover:bg-sky-600
+  max-w-sm
+  transition-all
+  duration-300
+  italic
+`;
+
+const MobileTitle = tw.div`
+  text-blue-500
+  font-light
+  pb-5
 `;
 
 const Service: NextPage = () => {
@@ -186,102 +211,178 @@ const Service: NextPage = () => {
           </Link>
         </ButotnContainer>
       </Header>
+      <ImageContainer>
+        <Image
+          src='/mobile_bg/004.png'
+          width={800}
+          height={1064}
+          objectFit={'contain'}
+          alt='바다 배경'
+        />
+        <MobileBtnContainer>
+          <MobileTitle>
+            <span className='font-bold'>준비</span> 되어있으신가요?
+            <br />
+            <span className='font-bold'>여러분의 인연도</span> 준비되어
+            있습니다.
+          </MobileTitle>
+
+          <Link href='/join'>
+            <a>
+              <MobileContactBtn>신청하기</MobileContactBtn>
+            </a>
+          </Link>
+        </MobileBtnContainer>
+      </ImageContainer>
       <IntroduceSection>
-        <IntroduceItem className='bg-r mx-auto w-full max-w-2xl drop-shadow-md'>
+        <IntroduceItem className='bg-r mx-auto w-full max-w-2xl'>
           <IntroduceText>
-            <IntroduceTitle>솔로 기장?</IntroduceTitle>
-            <IntroduceDescription>
+            <Image
+              alt={'sologijangsignature'}
+              src='/sologijangsignature.png'
+              width={300}
+              height={100}
+              objectFit={'contain'}
+            />
+            <IntroduceTitle className='-mt-8 font-light'>
+              솔로기장
+              <br />
+              <span className='font-bold'>탄생비화</span>
+            </IntroduceTitle>
+            <IntroduceDescription className='font-light leading-6'>
               <p>
-                솔로 기장은 “나는 솔로”라는 프로그램을 보고 기획되었습니다.
+                <span className='font-bold'>
+                  솔로 기장은
+                  <br />
+                  “나는 솔로”라는 프로그램을 보고 기획되었습니다.
+                </span>
+              </p>
+              <p>
                 방송은 되지 않습니다. 여러분의 인연을 만드는 데 집중하겠습니다.
               </p>
               <br />
               <p>
-                기장은 부산의 교외로, 기장의 바다는 고요하고 아늑한 느낌마저
-                줍니다. 바다를 따라 걷다 보면 어느새 마음이 정리되고 편안해지는
-                것을 느낄 수 있죠. 이런 기장은 인연을 만나는데 좋은 장소입니다.
-                인연의 시작이라는 선물이 여기에 있습니다. 이제 2박 3일간,
-                아름다운 기장에서의 여정이 여러분을 기다리고 있습니다.
+                기장은 부산의 교외로,
+                <br />
+                기장의 바다는 고요하고 아늑한 느낌마저 줍니다.
+                <br />
+                바다를 따라 걷다 보면 어느새 마음이 정리되고 편안해지는 것을
+                느낄 수 있죠.
+                <br />
+                이런 기장은 인연을 만나는데 좋은 장소입니다.
+                <br />
+                인연의 시작이라는 선물이 여기에 있습니다.
               </p>
               <br />
               <p>
+                <span className='font-bold'>
+                  이제 2박 3일간,
+                  <br />
+                  아름다운 기장에서의 여정이 여러분을 기다리고 있습니다.
+                </span>
+                <br />
                 2박 3일 동안 기장의 아름다운 바다와 함께 여러 명의 남녀들이
-                시간을 보내게 됩니다. 저희는 서로의 마음을 확인할 기회를
-                계속해서 만들어 드릴 겁니다. 인생의 짝을 찾을 준비가 되었다면
-                마음을 열고 진정한 자신을 보여주세요.
+                시간을 보내게 됩니다.
+                <br />
+                저희는 서로의 마음을 확인할 기회를 계속해서 만들어 드릴 겁니다.
+                <br />
+                인생의 짝을 찾을 준비가 되었다면 마음을 열고 진정한 자신을
+                보여주세요.
               </p>
               <br />
               <p>
-                인원은 신청해 주신 내용을 최대한 검토하고, 연락을 드릴 겁니다.
+                <span className='font-bold'>
+                  인원은 신청해 주신 내용을 최대한 검토하고,
+                  <br />
+                  연락을 드릴 겁니다.
+                </span>
+                <br />
                 대면(여의치 않을 경우 비대면)으로 이야기를 나눈 후 신청자들을
-                선별해서 일정과 장소를 공지해 드릴 겁니다. 그렇기 때문에
-                신청서는 진심을 가득 담아서 써주세요!
+                선별해서 일정과 장소를 공지해 드릴 겁니다.
+                <br />
+                그렇기 때문에 신청서는 진심을 가득 담아서 써주세요!
               </p>
               <br />
               <p>
-                기대하셔도 좋습니다. 잊지 못할 추억을 가지고 가세요. 서로의
-                인연을 찾는 시간이기도 하지만 자기 자신을 알아가는 시간이기도
-                합니다.
+                기대하셔도 좋습니다. 잊지 못할 추억을 가지고 가세요.
+                <br />
+                <span className='font-bold'>
+                  서로의 인연을 찾는 시간이기도 하지만 자기 자신을 알아가는
+                  시간이기도 합니다.
+                </span>
               </p>
+              <div className="mt-10 h-56 w-full bg-[url('/bg/bg4_original.png')] bg-cover"></div>
             </IntroduceDescription>
           </IntroduceText>
         </IntroduceItem>
-        <ButotnContainer className='text-center'>
-          <Link href='join'>
-            <a>
-              <ContactBtn
-                className='mx-auto
-border-slate-400 px-20 text-slate-400'
-              >
-                신청하기
-              </ContactBtn>
-            </a>
-          </Link>
-        </ButotnContainer>
 
-        <IntroduceItem className='bg-r mx-auto w-full max-w-2xl items-center drop-shadow-md'>
+        <IntroduceItem className='bg-r mx-auto w-full max-w-2xl items-center'>
           <IntroduceText>
-            <IntroduceTitle>야심차게 준비했습니다.</IntroduceTitle>
+            <Image
+              alt={'sologijangsignature'}
+              src='/sologijangsignature.png'
+              width={300}
+              height={100}
+              objectFit={'contain'}
+            />
+            <IntroduceTitle className='-mt-8 font-light'>
+              야심차게
+              <br />
+              <span className='font-bold'>준비했습니다.</span>
+            </IntroduceTitle>
             <IntroduceDescription>
               <p>
-                지난 1여 년간 고민과 기획을 수없이 한끝에 이렇게 “솔로 기장”을
-                공개하게 되었습니다.
+                지난 1여 년간 고민과 기획을 수없이 한끝에 이렇게
+                <br />
+                <span>“솔로 기장”을 공개하게 되었습니다.</span>
               </p>
               <br />
               <p>
                 참여하신 여러분들 한 분 한 분 서로를 이어주는데 최선을
-                다하겠습니다. “진심”으로 지원해주신 분들께 서로의 인연을 만날 수
-                있도록 “진심”으로 도와드리겠습니다.
+                다하겠습니다.
+                <br />
+                “진심”으로 지원해주신 분들께{' '}
+                <span className='font-bold'>서로의 인연을 만날 수 있도록</span>
+                “진심”으로 도와드리겠습니다.
               </p>
               <br />
               <p>망설이지 말고 지원해 주세요.</p>
             </IntroduceDescription>
           </IntroduceText>
         </IntroduceItem>
-        <IntroduceItem className='bg-r mx-auto w-full max-w-2xl items-center drop-shadow-md'>
+        <IntroduceItem className='bg-r mx-auto w-full max-w-2xl items-center'>
           <IntroduceText>
-            <IntroduceTitle>어떻게 진행되나요?</IntroduceTitle>
+            <Image
+              alt={'sologijangsignature'}
+              src='/sologijangsignature.png'
+              width={300}
+              height={100}
+              objectFit={'contain'}
+            />
+            <IntroduceTitle className='-mt-8 font-light'>
+              어떻게
+              <br />
+              <span className='font-bold'>진행되나요?</span>
+            </IntroduceTitle>
             <IntroduceDescription>
-              <p>
-                - 신청자를 모집 후, 서로의 이상형에 맞게 선별하는 과정을 거치게
-                됩니다.
-              </p>
-              <br />
-              <p>
-                - 진실한 참여자를 확인하기 위해 운영자와 대면(혹은 비대면)으로
-                이야기를 나누게 됩니다.
-              </p>
-              <br />
-              <p>- 참여자가 확정된 이후, 일정과 숙소가 공지 됩니다.</p>
-              <br />
-              <p>
-                - 총 2박 3일간의 일정으로 첫날 1시부터 셋째 날 11시까지 일정이
-                진행됩니다.
-              </p>
-              <br />
-              <p>- 단체 일정과 커플 일정이 따로 주어지게 됩니다.</p>
-              <br />
-              <p className='text-center text-red-300'>
+              <ol className='list-decimal leading-6'>
+                <li>
+                  신청자 모집이 끝나면, 서로의 이상형에 맞게 선별하는 과정을
+                  거치게 됩니다.
+                </li>
+                <li>
+                  진실한 참여자를 확인하기 위해 운영자와 대면(혹은 비대면)으로
+                  이야기를 나누게 됩니다.
+                </li>
+                <li>참여자가 확정된 이후, 일정과 숙소가 공지 됩니다.</li>
+                <li>
+                  총 2박 3일간의 일정으로 첫날 1시부터 셋째 날 11시까지 일정이
+                  진행됩니다.
+                </li>
+                <li>단체 일정과 커플 일정이 따로 주어지게 됩니다.</li>
+              </ol>
+
+              <p className='mt-10 text-center text-blue-900'>
                 좀 설레도 됩니다. 곧 만날 거니까.
               </p>
             </IntroduceDescription>

@@ -99,60 +99,113 @@ const LoveMessageContainer = tw.div`
   space-x-3
 `;
 const LoveMessage = tw.div``;
+const PCView = tw.div`
+hidden
+sm:block
+`;
+const MobileView = tw.div`
+bg-[url('/join_bg.png')]
+bg-cover
+sm:hidden
+`;
+const IntroduceMessage = tw.div`
+  text-center
+  pt-[13rem]
+  sm:pt-[30rem]
+  text-slate-500
+  font-semibold
+`;
+
+const MailGuide = tw.div`
+  mt-12
+  text-center
+  relative
+`;
+const MailGuideContent = tw.div`
+  absolute
+  top-12
+  w-full
+  text-pink-700
+`;
+const MailAddressContainer = tw.div`
+  absolute
+  w-full
+  top-12
+`;
+
+const MailAddress = styled.div`
+  margin-top: 5rem;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 80px,
+    #fda4af 200px,
+    rgba(255, 255, 255, 0) 320px
+  );
+  background-size: 400px 100%;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-left: 60px;
+  margin-right: 60px;
+`;
+
+const MessageBox = tw.div`
+    text-center
+`;
 
 const Join: NextPage = () => {
   return (
     <>
-      <Header>
-        <TopSmallTitle>준비할건 설레는 마음뿐.</TopSmallTitle>
-        <TopTitle>참여방법은 간단합니다.</TopTitle>
-        <TopSubtitle>
-          메일을 보내주세요.
+      <MobileView>
+        <IntroduceMessage>
+          메일을 보내주세요
           <br />
-          상시로 여러분들의 연락을 기다리고 있습니다.
+          여러분의 연락을 기다리고 있습니다.
+        </IntroduceMessage>
+        <MailGuide>
+          <Image
+            alt='message_box'
+            src='/mailguide_box.png'
+            width={400}
+            height={200}
+            objectFit='contain'
+          />
+          <MailGuideContent>
+            이름. 나이. 키. 살고 계신 곳. 이상형.
+            <br />
+            본인 사진. 카카오톡 아이디.
+            <br />
+            간단한 자기소개
+          </MailGuideContent>
+          <MailAddressContainer>
+            <MailAddress>yooja.ty@gmail.com</MailAddress>
+          </MailAddressContainer>
+        </MailGuide>
+        <MessageBox className='ml-10 mt-20'>
+          사랑을 이야기하면
           <br />
-          이름 / 나이 / 키 / 살고 계신 곳 / 이상형 <br />
-          본인 사진 / 카카오톡 아이디 / 자기소개를
+          사랑을 하게 된다.
           <br />
-          아래 메일로 보내주세요!
+          W.G 베넘
+        </MessageBox>
+        <MessageBox className='mt-44 pb-10'>
+          우리는 오로지 사랑을 함으로써
           <br />
+          사랑을 배울 수 있다.
           <br />
-          <span className='text-lg'>yooja.ty@gmail.com</span>
-        </TopSubtitle>
-      </Header>
-      <MailInfoSection>
-        <MailInfoItem>
-          <LoveMessageContainer>
-            <LoveMessage>
-              사랑을 이야기하면 사랑을 하게 된다.
-              <br />
-              W.G. 베넘
-            </LoveMessage>
-          </LoveMessageContainer>
-          <PhotoContainer>
-            <PhotoItem className='mt-20'>
-              <Image
-                alt='남자'
-                src='/man.jpg'
-                width='300'
-                height='300'
-                objectFit='cover'
-              />
-            </PhotoItem>
-            <PhotoItem>
-              <Image
-                alt='여자'
-                src='/woman.jpg'
-                width='300'
-                height='200'
-                objectFit='cover'
-              />
-            </PhotoItem>
-          </PhotoContainer>
-        </MailInfoItem>
-
-        <MailInfoItem>
-          <MailInfoDescription>
+          아이리스 머독
+        </MessageBox>
+      </MobileView>
+      <PCView>
+        <Header>
+          <TopSmallTitle>준비할건 설레는 마음뿐.</TopSmallTitle>
+          <TopTitle>참여방법은 간단합니다.</TopTitle>
+          <TopSubtitle>
+            메일을 보내주세요.
+            <br />
+            상시로 여러분들의 연락을 기다리고 있습니다.
+            <br />
             이름 / 나이 / 키 / 살고 계신 곳 / 이상형 <br />
             본인 사진 / 카카오톡 아이디 / 자기소개를
             <br />
@@ -160,9 +213,52 @@ const Join: NextPage = () => {
             <br />
             <br />
             <span className='text-lg'>yooja.ty@gmail.com</span>
-          </MailInfoDescription>
-        </MailInfoItem>
-      </MailInfoSection>
+          </TopSubtitle>
+        </Header>
+        <MailInfoSection>
+          <MailInfoItem>
+            <LoveMessageContainer>
+              <LoveMessage>
+                사랑을 이야기하면 사랑을 하게 된다.
+                <br />
+                W.G. 베넘
+              </LoveMessage>
+            </LoveMessageContainer>
+            <PhotoContainer>
+              <PhotoItem className='mt-20'>
+                <Image
+                  alt='남자'
+                  src='/man.jpg'
+                  width='300'
+                  height='300'
+                  objectFit='cover'
+                />
+              </PhotoItem>
+              <PhotoItem>
+                <Image
+                  alt='여자'
+                  src='/woman.jpg'
+                  width='300'
+                  height='200'
+                  objectFit='cover'
+                />
+              </PhotoItem>
+            </PhotoContainer>
+          </MailInfoItem>
+
+          <MailInfoItem>
+            <MailInfoDescription>
+              이름 / 나이 / 키 / 살고 계신 곳 / 이상형 <br />
+              본인 사진 / 카카오톡 아이디 / 자기소개를
+              <br />
+              아래 메일로 보내주세요!
+              <br />
+              <br />
+              <span className='text-lg'>yooja.ty@gmail.com</span>
+            </MailInfoDescription>
+          </MailInfoItem>
+        </MailInfoSection>
+      </PCView>
     </>
   );
 };

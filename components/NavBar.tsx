@@ -8,12 +8,32 @@ import { useEffect, useLayoutEffect, useState } from 'react';
 const TopBarWrapper = styled.div<{ scrollTop: number }>`
   ${(p) => (p.scrollTop > 0 ? 'background-color: #fda4af;' : '')}
   transition:all 0.1s;
+  position: fixed;
+  @media (min-width: 768px) {
+    .md\:h-28 {
+      height: 7rem /* 112px */;
+    }
+  }
+  @media (min-width: 1024px) {
+    .lg\:px-24 {
+      padding-left: 6rem /* 96px */;
+      padding-right: 6rem /* 96px */;
+    }
+  }
+
+  display: flex;
+  height: 7rem;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
 `;
 
 const MenuBarContainer = tw.div`
-block
-z-50
-lg:hidden
+  block
+  z-50
+  lg:hidden
 `;
 
 const TopLogoContainer = tw.div`
@@ -23,38 +43,38 @@ const TopLogoContainer = tw.div`
 `;
 
 const ImageContainer = tw.div`
-w-36
-h-20
-relative
-mt-2
+  w-36
+  h-20
+  relative
+  mt-2
 `;
 
 const MenuContainer = tw.div<{ $isSideMenuShow: boolean }>`
-fixed
-w-4/5
-max-w-[18.75em]
-h-screen
-${(props) => (props.$isSideMenuShow ? 'right-0' : '-right-full')}
-transition-all
-lg:transition-none
-duration-500
-ease-menu-in-out
-top-0
-lg:h-auto
-lg:right-auto
-lg:top-auto
-lg:w-auto
-lg:flex
-lg:relative
-lg:space-x-7
-text-lg
-bg-[#fda4af]
-z-50
-px-8
-pt-5
-lg:px-0
-lg:pt-5
-lg:bg-transparent
+  fixed
+  w-4/5
+  max-w-[18.75em]
+  h-screen
+  ${(props) => (props.$isSideMenuShow ? 'right-0' : '-right-full')}
+  transition-all
+  lg:transition-none
+  duration-500
+  ease-menu-in-out
+  top-0
+  lg:h-auto
+  lg:right-auto
+  lg:top-auto
+  lg:w-auto
+  lg:flex
+  lg:relative
+  lg:space-x-7
+  text-lg
+  bg-[#fda4af]
+  z-50
+  px-8
+  pt-5
+  lg:px-0
+  lg:pt-5
+  lg:bg-transparent
 `;
 
 const MenuBarIcon = tw.svg<{ $isSideMenuShow: boolean }>`
@@ -66,10 +86,10 @@ animate-wiggle
 `;
 
 const TopMenuItem = tw.div`
-text-base
-font-medium
-pb-5
-text-white
+  text-base
+  font-medium
+  pb-5
+  text-white
 
 `;
 
@@ -118,10 +138,7 @@ export default function NavBar({
 
   return (
     <>
-      <TopBarWrapper
-        scrollTop={scrollTop}
-        className='fixed flex h-28 w-full items-center justify-between px-7 md:h-28 lg:px-24'
-      >
+      <TopBarWrapper scrollTop={scrollTop}>
         <TopLogoContainer>
           <Link href='/'>
             <a>
@@ -167,7 +184,6 @@ export default function NavBar({
             </Link>
           ))}
         </MenuContainer>
-
         <MenuBarContainer onClick={() => setIsSideMenuShow((prev) => !prev)}>
           <MenuBarIcon
             $isSideMenuShow={isSideMenuShow}

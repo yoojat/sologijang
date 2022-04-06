@@ -18,6 +18,10 @@ module.exports = {
       animation: {
         wiggle: 'wiggle 0.5s ease-in-out',
       },
+      fontFamily: {
+        pen: ['Nanum Pen Script'],
+        brush: ['Nanum Brush Script'],
+      },
     },
   },
   plugins: [require('tailwindcss-textshadow')],

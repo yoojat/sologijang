@@ -2,22 +2,17 @@ import Image from 'next/image';
 import tw from 'tailwind-styled-components';
 
 const BodyItemWrapper = tw.div`
-  px-10
   max-w-screen-lg
   mx-auto
   flex
-  flex-col
-  lg:flex-row
+  flex-row
   justify-center
   items-center
   w-full
-  lg:w-auto
-  lg:justify-between
-  lg:odd:flex-row-reverse
-  lg:items-start
+  odd:flex-row-reverse
 `;
 const DescriptionImage = tw.div`
-  w-full
+  w-6/12
   h-96
   lg:h-64
   lg:max-w-md
@@ -27,7 +22,8 @@ const DescriptionBox = tw.div`
   lg:max-w-md
   mt-10
   lg:mt-0
-  w-full
+  w-6/12
+  px-5
 `;
 const TitleDescription = tw.h2`
   text-[#FD4155]
@@ -35,12 +31,19 @@ const TitleDescription = tw.h2`
   mb-3
 `;
 const SubTitleDescription = tw.div`
-  text-gray-500
+text-rose-500
   mb-5
 `;
-const SmallDescription = tw.div``;
+const SmallDescription = tw.div`
+  text-sm
+  pb-28
+  border-b-2
+  border-rose-200
+  text-rose-400
+`;
 const SmallDescriptionTitle = tw.div``;
-const SmallSubDescriptionContent = tw.div``;
+const SmallSubDescriptionContent = tw.div`
+`;
 
 interface IProps {
   imageSrc: string;
@@ -69,12 +72,13 @@ export default function BodyItem({
           // height={500}
           layout='fill'
           objectFit='cover'
-          className='rounded-xl' // just an example
         />
       </DescriptionImage>
 
       <DescriptionBox>
-        <TitleDescription>{titleDescription}</TitleDescription>
+        <TitleDescription
+          dangerouslySetInnerHTML={{ __html: titleDescription }}
+        ></TitleDescription>
         <SubTitleDescription>{subtitleDescription}</SubTitleDescription>
         <SmallDescription>
           <SmallDescriptionTitle>{smallDescriptionTitle}</SmallDescriptionTitle>

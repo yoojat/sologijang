@@ -10,7 +10,6 @@ import useWindowSize from '@libs/useWindowSize';
 import { mediaSize } from '@libs/media';
 
 const TopSection = tw.div`
-  pb-5
   relative
 `;
 
@@ -72,7 +71,7 @@ const ButtonContainer = tw.div`
   absolute
   sm:relative
   w-full
-  bottom-8
+  bottom-1
   sm:bottom-0
   sm:mt-10
   `;
@@ -99,8 +98,8 @@ const ImageContainer = tw.div`
   `;
 
 const BodySection = tw.section`
-  mt-20
   space-y-24
+  sm:mt-20
 `;
 
 const MessageSection = tw.section`
@@ -202,24 +201,6 @@ const Home: NextPage = () => {
               height={2813}
               objectFit='contain'
             />
-            {/* <div>
-              <img alt='배경1' src='bg/bg1.png' />
-            </div>
-            <div>
-              <img alt='배경2' src='bg/bg2.png' />
-            </div>
-            <div>
-              <img alt='배경3' src='bg/bg3.png' />
-            </div>
-            <div>
-              <img alt='배경4' src='bg/bg4.png' />
-            </div>
-            <div>
-              <img alt='배경5' src='bg/bg5.png' />
-            </div>
-            <div>
-              <img alt='배경6' src='bg/bg6.png' />
-            </div> */}
           </Carousel>
         ) : (
           <Carousel
@@ -284,9 +265,11 @@ const Home: NextPage = () => {
       </TopSection>
       <BodySection>
         <BodyItem
-          imageSrc={'/single.jpg'}
-          imageAlt={'web_consulting'}
-          titleDescription={'현재 솔로이신가요?'}
+          imageSrc={'/index_imgs/1.png'}
+          imageAlt={'나는솔로'}
+          titleDescription={
+            '<div style="font-weight:lighter;">현재<br/><span style="font-weight:bold;">솔로</span><br/>이신가요?<div>'
+          }
           subtitleDescription={'변화를 시도해보세요'}
           smallDescriptionTitle={'그냥 신청만 해주세요.'}
           smallSubDescriptionContents={[
@@ -295,9 +278,11 @@ const Home: NextPage = () => {
           ]}
         />
         <BodyItem
-          imageSrc={'/wait.jpg'}
+          imageSrc={'/index_imgs/2.png'}
           imageAlt={'what are you waiting for'}
-          titleDescription={'무엇을 기다리고 계시나요?'}
+          titleDescription={
+            '<div style="font-weight:lighter;"><span style="font-weight:bold;">무엇을</span><br/>기다리고<br/>계신가요?<div>'
+          }
           subtitleDescription={'먼저 움직이세요!'}
           smallDescriptionTitle={'저희가 도와드릴게요.'}
           smallSubDescriptionContents={[
@@ -306,45 +291,82 @@ const Home: NextPage = () => {
             '단, 가벼운 마음은 안됩니다.',
           ]}
         />
-        <BodyItem
-          imageSrc={'/marry.jpg'}
-          imageAlt={'pls only seriously people'}
-          titleDescription={'결혼을 간절히 원하시는 분만 지원해 주세요!'}
-          subtitleDescription={'정말 간절한 분들에게만 기회를 드리고 싶습니다.'}
-          smallDescriptionTitle={'가벼운 마음으로 오는 곳이 아닙니다.'}
-          smallSubDescriptionContents={[
-            '진정한 사랑을 찾기 위한 사람들을 위한 시간입니다.',
-            '어설픈 마음은 정중히 거절하겠습니다.',
-          ]}
-        />
+        <div className='flex justify-center text-[#FD4155]'>
+          <div className='-space-y-5 px-5 text-xs'>
+            <div className='flex h-24 w-24 items-center justify-center rounded-full border-2 border-rose-200 text-center'>
+              간절한
+              <br />
+              마음
+            </div>
+            <div className='flex h-24 w-24 items-center justify-center rounded-full border-2 border-rose-200 text-center'>
+              진지한
+              <br />
+              마음
+            </div>
+            <div className='flex h-24 w-24 items-center justify-center rounded-full border-2 border-rose-200 text-center'>
+              진정한
+              <br />
+              사랑을
+              <br />
+              찾기 위한 다짐
+            </div>
+          </div>
+          <div>
+            <div className='pb-5 text-2xl font-light'>
+              <span className='font-bold'>결혼을</span>
+              <br />
+              간절히
+              <br />
+              원하시는 분만
+              <br />
+              지원해 주세요.
+            </div>
+            <div className='pb-5 text-xs font-semibold'>
+              정말 간절한 분들에게만 기회를 드리고 싶습니다.
+            </div>
+            <div className='text-xs font-light'>
+              <p>
+                가벼운 마음으로 오는 곳이 아닙니다.
+                <br />
+                진정한 사랑을 찾고 싶은 사람들을 위한 시간입니다.
+                <br />
+                어설픈 마음은 정중히 거절하겠습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="
+          w-full
+          bg-[url('/index_imgs/3.png')]
+          bg-cover
+          text-right
+          "
+        >
+          <div className='py-16'>
+            <div className='mr-7 inline-block bg-white p-3 text-left'>
+              <div className='text-2xl font-light text-rose-500'>
+                <span className='font-bold'>솔로가</span>
+                <br />
+                <span className='font-bold'>커플이</span>
+                되는 곳, 솔로기장
+              </div>
+              <div className='my-3 text-rose-300'>
+                이곳에서 만들어지는 무궁무진한 사랑이야기
+              </div>
+              <div className='text-rose-300'>
+                생각은 누구나 할 수 있습니다.
+                <br />
+                하지만 행동은 아무나 할 수 없습니다.
+                <br />
+                <span className='font-bold text-rose-400'>
+                  지금 바로 여러분의 사랑을 찾아보세요
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </BodySection>
-      <MessageSection>
-        <MessageContentContainer>
-          <MessageTitle>솔로가 커플이 되는 곳, 솔로 기장</MessageTitle>
-          <MessageSubtitle>
-            <MessageSubtitleHead>
-              솔로 기장, 그곳에서 만들어지는 무궁무진한 이야기
-            </MessageSubtitleHead>
-            <MessaegSubtitleContent>
-              생각은 누구나 할 수 있습니다.
-              <br />
-              하지만 행동은 아무나 할 수 없습니다.
-              <br />
-              지금 바로 여러분의 사랑을 찾아보세요.
-            </MessaegSubtitleContent>
-          </MessageSubtitle>
-        </MessageContentContainer>
-        <MessageImgContainer>
-          <Image
-            src='/couple.jpg'
-            alt='move yourself'
-            layout='fill'
-            objectFit='cover'
-            // width={800}
-            // height={600}
-          />
-        </MessageImgContainer>
-      </MessageSection>
     </>
   );
 };

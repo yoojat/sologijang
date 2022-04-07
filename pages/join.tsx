@@ -113,7 +113,7 @@ sm:hidden
 `;
 const IntroduceMessage = tw.div`
   text-center
-  pt-[15rem]
+  pt-[80%]
   sm:pt-[30rem]
   text-slate-500
   font-semibold
@@ -187,14 +187,14 @@ const Join: NextPage = () => {
             <MailAddress>yooja.ty@gmail.com</MailAddress>
           </MailAddressContainer>
         </MailGuide>
-        <MessageBox className='ml-10 mt-5'>
+        <MessageBox className='mt-[50%] ml-10'>
           사랑을 이야기하면
           <br />
           사랑을 하게 된다.
           <br />
           <div className='font-brush mt-2'> W.G 베넘</div>
         </MessageBox>
-        <MessageBox className='mt-52 pb-10'>
+        <MessageBox className='mt-[50%] pb-10'>
           우리는 오로지 사랑을 함으로써
           <br />
           사랑을 배울 수 있다.

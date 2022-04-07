@@ -10,15 +10,11 @@ const TopBarWrapper = styled.div<{ scrollTop: number }>`
   transition:all 0.1s;
   position: fixed;
   @media (min-width: 768px) {
-    .md\:h-28 {
-      height: 7rem /* 112px */;
-    }
+    height: 7rem /* 112px */;
   }
   @media (min-width: 1024px) {
-    .lg\:px-24 {
-      padding-left: 6rem /* 96px */;
-      padding-right: 6rem /* 96px */;
-    }
+    padding-left: 6rem /* 96px */;
+    padding-right: 6rem /* 96px */;
   }
 
   display: flex;

@@ -166,7 +166,7 @@ const Join: NextPage = () => {
         <IntroduceMessage>
           메일을 보내주세요
           <br />
-          여러분의 연락을 기다리고 있습니다.
+          여러분의 연락을 기다리고 있습니다
         </IntroduceMessage>
         <MailGuide>
           <Image

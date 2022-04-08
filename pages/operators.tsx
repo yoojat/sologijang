@@ -8,6 +8,8 @@ import PortfolioItem from '@components/PortfolioItem';
 const Header = tw.div`
   text-center
   relative
+  hidden
+  sm:block
 `;
 
 const TopGradient = tw.div`
@@ -68,6 +70,10 @@ const IntroduceDescription = tw.p`
   mb-2
 `;
 
+const MobileHeader = tw.div`
+sm:hidden
+`;
+
 const Portfolio: NextPage = () => {
   return (
     <>
@@ -92,7 +98,17 @@ const Portfolio: NextPage = () => {
           <span className='font-bold'>여기서 마음껏 당신을 보여주세요.</span>
         </TopSubtitle>
       </Header>
-      <div className='bg-red mx-auto h-44 w-0 border-r-2 border-slate-400'></div>
+      <MobileHeader>
+        <Image
+          alt='특별한 2박 3일을 위해'
+          src='/join_main.png'
+          width={825}
+          height={1100}
+          objectFit='contain'
+        />
+      </MobileHeader>
+
+      <div className='bg-red mx-auto hidden h-44 w-0 border-r-2 border-slate-400 sm:block'></div>
       <IntroduceSection>
         <IntroduceItem className='w-full max-w-7xl items-center '>
           <IntroduceText>

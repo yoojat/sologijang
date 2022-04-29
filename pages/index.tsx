@@ -313,7 +313,7 @@ const Home: NextPage = () => {
           </div>
           <div>
             <div className='pb-5 text-2xl font-light'>
-              <span className='font-bold'>결혼을</span>
+              <span className='font-bold'>연애를</span>
               <br />
               간절히
               <br />

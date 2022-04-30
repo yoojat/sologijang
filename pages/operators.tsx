@@ -138,6 +138,17 @@ const Portfolio: NextPage = () => {
               축가, 사회, 행사 진행 등 이벤트를 기획하는 전문가입니다.
               <br />
               <br />
+              <div className='text-center'>
+                <Image
+                  src='/ty.jpeg'
+                  alt='운영자 김태영'
+                  width={700}
+                  height={450}
+                  objectFit='contain'
+                />
+                <div className='font-bold text-blue-400'>운영자 김태영</div>
+              </div>
+              <br />
               행사 진행을 하면서
               <br />
               감동과 재미를 주는 일을 할 때가 가장 행복하죠.
